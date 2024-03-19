@@ -1,1 +1,48 @@
-<p>about works!</p>
+<section
+       class="try ">
+        
+       <div class="new m-auto my-3" >
+        <label class="text-lg text-bold" for="firstName">First Name:</label>
+        <input class="py-1 text-black px-2 outline-0" type="text" id="firstName" name="firstName" [(ngModel)]="User.firstName">
+      
+        <label class="text-lg text-bold" for="lastName">Last Name:</label>
+        <input class="py-1 text-black px-2 outline-0" type="text" id="lastName" name="lastName" [(ngModel)]="User.lastName">
+      
+        <label class="text-lg text-bold" for="email">Email:</label>
+        <input class="py-1 text-black px-2 outline-0" type="email" id="email" name="email" [(ngModel)]="User.email">
+      
+        <label class="text-lg text-bold" for="gender">Gender:</label>
+        <select class="text-black py-1 outline-0" id="gender" name="gender" [(ngModel)]="User.gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      
+        <button class="bimp" (click)="onSubmit()">Submit</button>
+    </div>
+      
+
+    <p>{{displa}}</p>
+
+    <table class="border">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>firstName</th>
+                <th>lastName</th>
+                <th>Email</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let el of showUser; index as i">
+                <td>{{el.id}}</td>
+                <td>{{el.firstName}}</td>
+                <td>{{el.lastName}}</td>
+                <td>{{el.email}}</td>
+                <td>{{el.gender}}</td>
+                <button>del</button>
+            </tr>
+        </tbody>
+    </table>
+</section>

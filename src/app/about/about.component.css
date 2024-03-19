@@ -1,0 +1,33 @@
+.btn{
+    background-color: aqua;
+    padding: 10px;
+    margin: 10px ;
+    border-radius: 10px;
+
+}
+.try{
+    display: flex;
+    flex-direction: column;
+    /* background-color: brown; */
+}
+.new{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 10px;
+    color: white;
+    border-radius: 20px;
+    width: 60%;
+
+}
+.border{
+
+}
+.bimp{
+    align-self: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(55, 55, 146);
+    margin: 10px 0;
+}
