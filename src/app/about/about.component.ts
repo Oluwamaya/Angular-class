@@ -27,31 +27,34 @@ public id: number = 0;
  }
  onSubmit(){
 
-   if (this.User.firstName && this.User.lastName && this.User.email && this.User.gender) {
+   if (this.User.userName && this.User.password && this.User.email && this.User.gender) {
     
      this.id++;
      this.showUser.push({
-       firstName: this.User.firstName,
-       lastName: this.User.lastName,
+       userName: this.User.userName,
        email: this.User.email,
+       password: this.User.password,
        gender: this.User.gender,
        id: this.id,
       });
 
-      localStorage.setItem("angular", JSON.stringify(this.showUser));
+       localStorage.setItem("angular", JSON.stringify(this.showUser));
+       
+        alert("user creater successful ")
+        this.router.navigate(["/login"])
+      
+      
 
-      this.router.navigate(["/show_todo"])
-      
-      
       // this.User = {};
+      
     }else{
       alert("Cant save your input")
     }
     
   }
   ngOnInit(){
-    console.log(this.showUser);
-   this.showUser = JSON.parse(localStorage.getItem('angular')!) || [];
+    // console.log(this.showUser);
+  //  this.showUser = JSON.parse(localStorage.getItem('angular')!) || [];
     
    }
 }

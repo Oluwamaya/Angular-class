@@ -1,0 +1,13 @@
+<p>login works!</p>
+
+<main class="bg-secondary my-2 p-2 col-4 mx-auto rounded ">
+    <div class="">
+        <label class="h4" for="email">Email</label>
+        <input type="email" [(ngModel)]="User.email" id="email" class="form-control">
+    </div>
+    <div>
+        <label class="h4" for="password">password</label>
+        <input [(ngModel)]="User.password" type="password" name="" id="password" class="form-control">
+    </div>
+    <button class="  bimp" (click)="submited()">login </button>
+</main>
