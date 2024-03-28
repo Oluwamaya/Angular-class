@@ -24,6 +24,7 @@ export class LoginComponent {
       alert("Email or password cannot be empty")
     }else{
      const foundUser = this.allUsers.find( u => u.email === this.User.email && u.password === this.User.password)
+     
      if (foundUser) {
       localStorage.setItem("currentUser", JSON.stringify(foundUser));
       alert("user logged in successful ")
