@@ -12,7 +12,7 @@ import { OneFetchComponent } from './one-fetch/one-fetch.component';
 
 export const routes: Routes = [
     
-       {path: "", pathMatch : "full", redirectTo: "app"},
+       {path: "", pathMatch : "full", redirectTo: "home"},
        {path:"home", component: HomeComponent, canActivate: [authGuard]},
        {path:"show_todo" ,component:ShowTodoComponent},
        {path: "navbar", component: NavbarComponent},
